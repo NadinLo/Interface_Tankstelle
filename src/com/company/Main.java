@@ -19,7 +19,7 @@ public class Main {
 
         for (IFuel fuel : fuelStations) {
             if(fuel != null) {
-            if(fuel.hasMyFuel(opel1.fuel) && fuel.getLocation() == Location.DORNBIRN){
+            if(fuel.hasMyFuel(opel1.fuel) && fuel.getLocation() == carDriver.car.location){
                     fuel.goFuel(opel1);
                     break;
                 }
