@@ -23,6 +23,21 @@ public class Main {
         carDriver.chooseNearestGasStation(carDriver.car.typeOfDrive);
         carDriver.chooseCheapestGasStation(carDriver.car.typeOfDrive);
 
+        GasStation1 omv = new GasStation1(new Fuel[]{ Fuel.SUPER_E10, Fuel.SUPER95}, "Dornbirn", "OMV");
+        GasStation1 shell = new GasStation1(new Fuel[]{ Fuel.SUPER_E10, Fuel.SUPER95, Fuel.DIESEL}, "Bregenz", "Shell");
+        ChargingStation vkwBeiSpar = new ChargingStation(new Fuel[] { Fuel.ELECTRICITY}, "Lustenau", "VKW Spar Ladesäule");
+
+        IFuel[] fuelStations = new IFuel[10];
+        fuelStations[0] = omv;
+        fuelStations[1] = shell;
+        fuelStations[2] = vkwBeiSpar;
+
+        for (IFuel fuel : fuelStations) {
+            if(fuel.hasMyFuel(opel1.fuel) && fuel.getLocation() == "Dornbirn"){
+                fuel.goFuel(opel1);
+                break;
+            }
+        }
     }
 
 
