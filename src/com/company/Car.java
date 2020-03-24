@@ -4,15 +4,15 @@ public class Car {
     Brand brand;
     Fuel fuel;
     int fuelMax;
-    ITypeOfDrive typeOfDrive;
+    Location location;
 
-
-    public Car (Brand brand, ITypeOfDrive type, int fuelMax){
+    public Car (Brand brand, Fuel fuel, int fuelMax){
         this.brand = brand;
         this.fuelMax = fuelMax;
-        this.typeOfDrive = type;
+        this.fuel = fuel;
     }
 
-
-
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 }

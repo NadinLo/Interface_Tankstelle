@@ -2,6 +2,6 @@ package com.company;
 
 public interface IFuel {
     boolean hasMyFuel(Fuel fuel);
-    String getLocation();
+    Location getLocation();
     void goFuel(Car car);
 }

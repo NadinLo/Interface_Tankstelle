@@ -2,13 +2,12 @@ package com.company;
 
 public class ChargingStation implements IFuel {
     Fuel[] fuels;
-    String location = "";
-    String name = "";
-
-    public ChargingStation(Fuel[] fuels, String location, String name){
+    Location location;
+    Company company;
+    public ChargingStation(Fuel[] fuels, Location location, Company company){
         this.fuels = fuels;
         this.location = location;
-        this.name = name;
+        this.company = company;
     }
 
     @Override
@@ -24,7 +23,7 @@ public class ChargingStation implements IFuel {
     }
 
     @Override
-    public String getLocation() {
+    public Location getLocation() {
         return this.location;
     }
 
