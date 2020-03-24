@@ -1,13 +1,10 @@
 package com.company;
 
-import javax.swing.*;
-
-public class GasStation implements IFuel {
+public class ChargingStation implements IFuel {
     Fuel[] fuels;
     Location location;
     Company company;
-
-    public GasStation(Fuel[] fuels, Location location, Company company){
+    public ChargingStation(Fuel[] fuels, Location location, Company company){
         this.fuels = fuels;
         this.location = location;
         this.company = company;
